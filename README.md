@@ -14,21 +14,21 @@ This repository contains Principal Component Analysis (PCA) Implementation from 
 ## How PCA Works
 
 1. **Standardize the Data**: Different features may have different units and scales like salary vs. age. To compare them fairly PCA first standardizes the data by subtracting the mean and dividing by the standard deviation. making each feature have:
-  A mean of 0 and 
-  A standard deviation of 1
+ - A mean of 0 and 
+ - A standard deviation of 1
 
 2. **Calculate Covariance Matrix**: Next PCA calculates the covariance matrix to see how features relate to each other whether they increase or decrease together. 
 
 3. **Eigenvalues and Eigenvectors**: PCA identifies new axes where the data spreads out the most:
 
-  1st Principal Component (PC1): The direction of maximum variance (most spread).
-  2nd Principal Component (PC2): The next best direction, perpendicular to PC1 and so on.
+  - 1st Principal Component (PC1): The direction of maximum variance (most spread).
+  - 2nd Principal Component (PC2): The next best direction, perpendicular to PC1 and so on.
   These directions come from the eigenvectors of the covariance matrix and their importance is measured by eigenvalues.
 
 4. **Pick the Top Directions & Transform Data**: After calculating the eigenvalues and eigenvectors PCA ranks them by the amount of information they capture. We then:
 
-  Select the top k components hat capture most of the variance like 95%.
-  Transform the original dataset by projecting it onto these top components.
+  - Select the top k components hat capture most of the variance like 95%.
+  - Transform the original dataset by projecting it onto these top components.
   This means we reduce the number of features (dimensions) while keeping the important patterns in the data.
 
 ## Key Benefits of PCA
