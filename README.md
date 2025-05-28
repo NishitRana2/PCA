@@ -5,7 +5,7 @@ This repository contains Principal Component Analysis (PCA) Implementation from 
 
 - `Implementation.ipynb` contains implementation of PCA from scratch.
 
-- `MNIST.ipynb` contains implementation of PCA using `scikit-learn` on Mnist Dataset.
+- `PCA step-by-step.ipynb` contains implementation of PCA using `scikit-learn` on Mnist Dataset.
 
 # What is PCA?
 
@@ -14,23 +14,22 @@ This repository contains Principal Component Analysis (PCA) Implementation from 
 ## How PCA Works
 
 1. **Standardize the Data**: Different features may have different units and scales like salary vs. age. To compare them fairly PCA first standardizes the data by subtracting the mean and dividing by the standard deviation. making each feature have:
-
-A mean of 0
-A standard deviation of 1
+  A mean of 0 and 
+  A standard deviation of 1
 
 2. **Calculate Covariance Matrix**: Next PCA calculates the covariance matrix to see how features relate to each other whether they increase or decrease together. 
 
 3. **Eigenvalues and Eigenvectors**: PCA identifies new axes where the data spreads out the most:
 
-1st Principal Component (PC1): The direction of maximum variance (most spread).
-2nd Principal Component (PC2): The next best direction, perpendicular to PC1 and so on.
-These directions come from the eigenvectors of the covariance matrix and their importance is measured by eigenvalues.
+  1st Principal Component (PC1): The direction of maximum variance (most spread).
+  2nd Principal Component (PC2): The next best direction, perpendicular to PC1 and so on.
+  These directions come from the eigenvectors of the covariance matrix and their importance is measured by eigenvalues.
 
 4. **Pick the Top Directions & Transform Data**: After calculating the eigenvalues and eigenvectors PCA ranks them by the amount of information they capture. We then:
 
-Select the top k components hat capture most of the variance like 95%.
-Transform the original dataset by projecting it onto these top components.
-This means we reduce the number of features (dimensions) while keeping the important patterns in the data.
+  Select the top k components hat capture most of the variance like 95%.
+  Transform the original dataset by projecting it onto these top components.
+  This means we reduce the number of features (dimensions) while keeping the important patterns in the data.
 
 ## Key Benefits of PCA
 
@@ -51,22 +50,6 @@ This means we reduce the number of features (dimensions) while keeping the impor
 PCA is often used in image processing, such as in the **MNIST digit classification problem**. Here, PCA can reduce the number of pixels (features) in the dataset while retaining the essential information for classifying handwritten digits.
 
 
-## Notebooks
-
-### 1. PCA Implementation from Scratch
-This notebook walks through the process of implementing PCA using Python from scratch. It covers:
-- Theoretical foundation of PCA
-- Standardizing the dataset
-- Calculating covariance matrix
-- Computing eigenvalues and eigenvectors
-- Projecting the dataset onto new principal components
-
-### 2. PCA on MNIST Dataset
-This notebook uses PCA as a dimensionality reduction technique on the MNIST dataset, followed by classification using a machine learning model. It leverages the scikit-learn library for:
-- PCA implementation
-- Loading and preprocessing the MNIST dataset
-- Reducing the feature space using PCA
-- Training a classifier (e.g., Logistic Regression) on the reduced data
 
 
 ### Requirements
@@ -80,19 +63,7 @@ Make sure you have the following libraries installed:
 
 `scikit-learn`
 
-### Usage
-* Open the implementation.ipynb notebook to explore how PCA works under the hood.
-* Open the mnist.ipynb notebook to see PCA in action on the MNIST dataset using scikit-learn.
 
-### Project Structure
-```graphql
-PCA/
-│
-├── Implementation.ipynb     # PCA from scratch implementation
-├── MNIST.ipynb              # PCA with scikit-learn on the MNIST dataset
-├── digits.csv               # For training
-└── README.md                # Project readme file
-```
 
 ### Contributing
-If you have any suggestions or improvements, feel free to fork the repository and open a pull request.git add
+Contributions are welcome! Please feel free to submit a Pull Request or open an issue to discuss any changes or improvements.
